@@ -1,0 +1,50 @@
+{
+  "name": "babel-plugin-i18n-id-hashing",
+  "version": "2.1.0",
+  "description": "Namespaces the ID of React-Intl keys",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": "Eric Baer <me@ericbaer.com>",
+  "homepage": "https://github.com/walmartreact/babel-plugin-i18n-id-hashing",
+  "bugs": {
+    "url": "https://github.com/walmartreact/babel-plugin-i18n-id-hashing/issues"
+  },
+  "repository": "git://github.com/walmartreact/babel-plugin-i18n-id-hashing.git",
+  "private": false,
+  "dependencies": {
+    "babel-runtime": "^6.2.0"
+  },
+  "devDependencies": {
+    "assert-transform": "^1.0.0",
+    "babel-cli": "^6.1.18",
+    "babel-core": "^6.3.17",
+    "babel-eslint": "5.0.0",
+    "babel-plugin-array-includes": "^2.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "bluebird": "^3.0.6",
+    "colors": "^1.1.2",
+    "core-error-predicates": "^1.1.0",
+    "diff": "^2.2.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint": "^1.10.3",
+    "lodash": "^4.6.1",
+    "mocha": "^2.3.4",
+    "rimraf": "^2.4.3"
+  },
+  "scripts": {
+    "build": "babel src/ --out-dir lib/",
+    "check": "npm run clean && npm run build && npm run lint && npm run test",
+    "clean": "rimraf lib/",
+    "lint-src": "eslint src",
+    "lint-test": "eslint test/assert-transform.js",
+    "lint": "npm run lint-src && npm run lint-test",
+    "test": "mocha ./test/index.js"
+  },
+  "keywords": [
+    "babel-plugin",
+    "react-intl"
+  ]
+}
